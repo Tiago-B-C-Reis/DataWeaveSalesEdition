@@ -1,11 +1,5 @@
-version: '3'
+version: '3.1'
 services:
-  dbt:
-    image: article1dataops/dbt:latest
-    volumes:
-      - .:/usr/app
-    ports:
-      - "8080:8080"
   db:
     image: postgres
     restart: always
@@ -14,4 +8,4 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: dw
     ports:
-      - "5432:5432"
+      - "5433:5432" # Port already in use on another project: "5432:5432"
