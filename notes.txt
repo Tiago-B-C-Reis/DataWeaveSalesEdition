@@ -1,0 +1,6 @@
+# start a postgres instance (alternative for the docker compose)
+docker run --name isep-postgres -p 5434:5432 -e POSTGRES_PASSWORD=zirmor1994 -d postgres
+
+
+# Start Postgresql:
+psql -U admin -d dw -h localhost
